@@ -13,9 +13,15 @@ app.get('/', (req, res) => {
 });
 
 
-const propertyRoutes = require('./src/routes/property.routes')
+const userRoutes = require('./routes/users.routes')
+const propertyRoutes = require('./routes/property.routes')
+const authRoutes = require('./routes/auth.routes')
+app.use('/api/v1/auth', authRoutes);
+
+app.use('/api/v1/properties', propertyRoutes);
+
 // using as middleware
-app.use('/api/v1/properties', propertyRoutes)
+app.use('/api/v1/users', userRoutes);
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);

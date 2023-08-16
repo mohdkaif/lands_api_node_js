@@ -1,6 +1,7 @@
 'use strict';
 const Property = require('../models/property.model');
 exports.findAll = function (req, res) {
+    console.log('s');
     Property.findAll(function (err, property) {
         console.log('controller')
         if (err)

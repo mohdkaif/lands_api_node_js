@@ -5,7 +5,7 @@ const dbConn = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'lands_homes'
+    database: 'myfundraiser_new'
 });
 dbConn.connect(function (err) {
     if (err) throw err;
